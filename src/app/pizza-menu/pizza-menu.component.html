@@ -1,0 +1,290 @@
+<div>
+  <div>
+    <p class="pacifico">Pizza</p>
+  </div>
+
+  <form [formGroup]="pizzaFormGroup" (ngSubmit)="pizzaSubmit()">
+
+    <div>
+      <p class="font-size30">Cheese</p>
+    </div>
+    <table class="font-size25">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Toppings</td>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td>6.90</td>
+        <td>
+          <select formControlName="cheeseSmallQuantity">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </td>
+        <td>1.35</td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td>9.55</td>
+        <td>
+          <select formControlName="cheeseMediumQuantity">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </td>
+        <td>1.55</td>
+      </tr>
+      <tr>
+        <td>Large</td>
+        <td>12.30</td>
+        <td>
+          <select formControlName="cheeseLargeQuantity">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </td>
+        <td>1.85</td>
+      </tr>
+      <tr>
+        <td>Family</td>
+        <td>15.48</td>
+        <td>
+          <select formControlName="cheeseFamilyQuantity">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+          </select>
+        </td>
+        <td>2.05</td>
+      </tr>
+    </table>
+
+    <div class="font-size25">Toppings</div>
+
+    <div class="font-size25">
+      <input formControlName="pepperoni" type="checkbox" name="Pepperoni" value="Pepperoni"> Pepperoni<br>
+      <input formControlName="sausage" type="checkbox" name="Sausage" value="Sausage"> Sausage<br>
+      <input formControlName="bacon" type="checkbox" name="Bacon" value="Bacon"> Bacon<br>
+      <input formControlName="ham" type="checkbox" name="Ham" value="Ham"> Ham<br>
+      <input formControlName="mushrooms" type="checkbox" name="Mushrooms" value="Mushrooms"> Mushrooms<br>
+      <input formControlName="greenpeppers" type="checkbox" name="Green Peppers" value="Green Peppers"> Green
+      Peppers<br>
+      <input formControlName="onions" type="checkbox" name="Onions" value="Onions"> Onions<br>
+      <input formControlName="freshTomatos" type="checkbox" name="Fresh Tomatos" value="Fresh Tomatos"> Fresh
+      Tomatos<br>
+      <input formControlName="blackOlives" type="checkbox" name="Black Olives" value="Black Olives"> Black Olives<br>
+
+      <button class="font-size20" type="submit">Add to Cart</button>
+    </div>
+
+    <div>
+      <p class="pacifico">Specialty Pizzas</p>
+    </div>
+
+
+    <div>
+      <p class="font-size30">Vegetarian</p>
+      <p class="font-size25">Mushrooms, Onions, Garlic, Tomatoes, Green Peppers</p>
+      <table class="font-size25">
+        <tr>
+          <td>Small</td>
+          <td>11.25</td>
+          <td>
+            <select formControlName="vegetarianSmallQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Medium</td>
+          <td>15.25</td>
+          <td>
+            <select formControlName="vegetarianMediumQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Large</td>
+          <td>19.45</td>
+          <td>
+            <select formControlName="vegetarianLargeQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Family</td>
+          <td>23.75</td>
+          <td>
+            <select formControlName="vegetarianFamilyQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <button class="font-size20" type="submit">Add to Cart</button>
+
+
+    <div>
+      <p class="font-size30">BBQ Chicken</p>
+      <p class="font-size25">With your choice of Green Peppers or Jalapeno Peppers!</p>
+      <table class="font-size25">
+        <tr>
+          <td>Small</td>
+          <td>10.00</td>
+          <td>
+            <select formControlName="bbqChickenSmallQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Medium</td>
+          <td>14.00</td>
+          <td>
+            <select formControlName="bbqChickenMediumQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Large</td>
+          <td>18.00</td>
+          <td>
+            <select formControlName="bbqChickenLargeQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Family</td>
+          <td>22.00</td>
+          <td>
+            <select formControlName="bbqChickenFamilyQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <button class="font-size20" type="button" onclick="alert('PIZZA')">Add to Cart</button>
+
+    
+      <div>
+        <p class="pacifico">Sandwiches</p>
+        <tr class="font-size25">
+          <td>Italian Beef</td>
+          <td>6.50</td>
+          <td>
+            <select formControlName="italianBeefQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="font-size25">
+          <td>Italian Sausaage</td>
+          <td>6.00</td>
+          <td>
+            <select formControlName="italianSausageQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="font-size25">
+          <td>COMBO (Beef and Sausage</td>
+          <td>7.50</td>
+          <td>
+            <select formControlName="comboQuantity">
+              <option value=0>0</option>
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+            </select>
+          </td>
+        </tr>
+
+        <button class="font-size20" type="button" onclick="alert('PIZZA')">Add to Cart</button>
+
+      </div>
+  </form>
+</div>

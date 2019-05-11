@@ -1,0 +1,152 @@
+<div>
+  <form [formGroup]="registrationFormGroup" (ngSubmit)="registrationSubmit()">
+
+    <div class="text-center font-size25">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName">
+      <div
+        *ngIf="registrationFormGroup.controls['firstName'].invalid && (registrationFormGroup.controls['firstName'].dirty || registrationFormGroup.controls['firstName'].touched)">
+        <div class="text-color-red" *ngIf="registrationFormGroup.controls['firstName'].errors.required">
+          First Name is required
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+      <div
+        *ngIf="registrationFormGroup.controls['lastName'].invalid && (registrationFormGroup.controls['lastName'].dirty || registrationFormGroup.controls['lastName'].touched)">
+        <div class="text-color-red" *ngIf="registrationFormGroup.controls['lastName'].errors.required">
+          Last Name is required
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Street Address</label>
+      <input type="text" formControlName="streetAddress">
+      <div
+        *ngIf="registrationFormGroup.controls['streetAddress'].invalid && (registrationFormGroup.controls['streetAddress'].dirty || registrationFormGroup.controls['streetAddress'].touched)">
+        <div class="text-color-red" *ngIf="registrationFormGroup.controls['streetAddress'].errors.required">
+          Street Address is required
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>City</label>
+      <input type="text" formControlName="city">
+      <div
+        *ngIf="registrationFormGroup.controls['city'].invalid && (registrationFormGroup.controls['city'].dirty || registrationFormGroup.controls['city'].touched)">
+        <div class="text-color-red" *ngIf="registrationFormGroup.controls['city'].errors.required">
+          City is required
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>State</label>
+      <select required formControlName="state">
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Zip Code: </label>
+      <input formControlName="zipCode">
+      <div
+        *ngIf="registrationFormGroup.controls['zipCode'].invalid && (registrationFormGroup.controls['zipCode'].dirty || registrationFormGroup.controls['zipCode'].touched)"
+        class="text-color-red">
+        <div *ngIf="registrationFormGroup.controls['zipCode'].errors.required">
+          Zip code required
+        </div>
+        <div *ngIf="registrationFormGroup.controls['zipCode'].errors.pattern">
+          Invalid zip code
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Phone: </label>
+      <input formControlName="phone">
+      <div
+        *ngIf="registrationFormGroup.controls['phone'].invalid && (registrationFormGroup.controls['phone'].dirty || registrationFormGroup.controls['phone'].touched)"
+        class="text-color-red">
+        <div *ngIf="registrationFormGroup.controls['phone'].errors.required">
+          Phone required
+        </div>
+        <div *ngIf="registrationFormGroup.controls['phone'].errors.pattern">
+          Invalid phone
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Email</label>
+      <input type="email" formControlName="email">
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Password</label>
+      <input type="password" formControlName="password">
+    </div>
+
+    <div class="text-center font-size25">
+      <label>Verify Password</label>
+      <input type="password" formControlName="verifyPassword">
+    </div>
+
+    <button class="font-size20" type="submit" [disabled]="!registrationFormGroup.valid">Submit</button>
+  </form>
+</div>
