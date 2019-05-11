@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CheckOutComponent } from './check-out/check-out.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegistrationComponent } from './registration/registration.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
