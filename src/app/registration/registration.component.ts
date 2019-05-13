@@ -35,6 +35,7 @@ export class RegistrationComponent implements OnInit {
   registrationSubmit() {
     if (this.registrationFormGroup.valid) {
       this.customerService.postSignup(this.registrationFormGroup.value).subscribe(res => console.log(res));
+      this.registrationFormGroup.reset();
     }
   }
 
