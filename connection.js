@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 let pool = mysql.createPool({
     connectionLimit: 10,
-    host: "remotemysql.com",
-    user: "lTPoeNLw7z",
-    password: "9s8kDIunGj",
-    database: "lTPoeNLw7z",
-    port: 3306
+    host: process.env.DBhost,
+    user: process.env.DBuser,
+    password: process.env.DBpassword,
+    database: process.env.DBdatabase,
+    port: process.env.DBport
 });
 
 module.exports.pool = pool;
