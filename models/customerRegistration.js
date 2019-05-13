@@ -2,7 +2,7 @@ const pool = require("../connection").pool;
 const bcrypt = require("bcrypt");
 
 function create(req, res){
-    pool.query("SELECT * FROM CUSTOMER WHERE email = ?", 
+    pool.query("SELECT * FROM customer WHERE email = ?", 
     [req.body.email], (err, queryReturn)=>{
         if(queryReturn[0]){
             return res.send("EMAIL ALREADY EXISTS")
@@ -17,7 +17,7 @@ function create(req, res){
         console.log(state);
         let zipCode = req.body.zipCode; 
         let email = req.body.email;
-        pool.query("INSERT INTO CUSTOMER (firstName, lastName, phone, streetAddress, city, state, zipCode, email, password) VALUES(?,?,?,?,?,?,?,?,?)", 
+        pool.query("INSERT INTO customer (firstName, lastName, phone, streetAddress, city, state, zipCode, email, password) VALUES(?,?,?,?,?,?,?,?,?)", 
             [firstName, lastName, phone, streetAddress, city, state, zipCode, email, password], (err, result)=>{
             if(!err){
                 return res.send({msg:"Signed Up!"});
