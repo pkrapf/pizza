@@ -4,7 +4,7 @@ let pool = mysql.createPool({
     host: process.env.host,
     user: process.env.user,
     password: process.env.password,
-    databases: process.env.database,
+    database: process.env.databases,
     port: 3306
 });
 
