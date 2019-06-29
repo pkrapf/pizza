@@ -1,5 +1,7 @@
 # Pizza
 
+Angular project which displays a pizza restaurant. Functionality includes a home page and a menu page. A reactive form is used for a customer registration form. The customer information in saved to MySQK=L.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
